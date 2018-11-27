@@ -1,4 +1,4 @@
-!Implemented by Anant Dixit (October, 2014)
+! Animated Pendulum
 program animated_pendulum
 implicit none
 double precision, parameter :: pi = 4.0D0*atan(1.0D0), l = 1.0D-1, dt = 1.0D-2, g = 20.8D0
@@ -74,8 +74,16 @@ do i = 1,32
 end do
 end subroutine
 
-!subroutine execute_command_line( cmd )
-!character(len=*) :: cmd
+! returns data of type 'double' 
+DOUBLE PRECISION FUNCTION friction() !<-- need params
+IMPLICIT NONE
 
-!call system( cmd )
-!end subroutine execute_command_line
+!declare params
+
+!declare local variables
+
+!algorithm
+
+!friction = ...
+
+END SUBROUTINE friction
