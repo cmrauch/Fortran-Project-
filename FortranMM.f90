@@ -3,9 +3,9 @@ IMPLICIT NONE
 
 REAL :: start_time, stop_time
 INTEGER :: i, j
-INTEGER :: rows =10
-INTEGER :: columns =10 
-INTEGER, DIMENSION(10,10) :: a, b, c
+INTEGER :: rows =1000
+INTEGER :: columns =1000
+INTEGER, DIMENSION(1000,1000) :: a, b, c
 
   ! === c++ alg ===
   CALL SYSTEM('./c_MM')
@@ -19,7 +19,7 @@ INTEGER, DIMENSION(10,10) :: a, b, c
 ! initialize a
 DO i = 1, rows
 DO j = 1, columns
-a(i, j) = i+j
+a(i, j) = (i+j) 
 END DO
 END DO
 
@@ -28,17 +28,17 @@ PRINT *, 'A Matrix Initialized...'
 !initialize b  
 DO i = 1, rows
 DO j = 1, columns
-b(i, j) = i*j
+b(i, j) = (i*j) 
 END DO
 END DO
-   
+
 Print*, 'B Matrix Initialized...'
    
 ! matrix multiplication
 PRINT*, 'Matrix A and B are being multiplied...'
 c = matmul(a, b)
 !printing subroutine
-CALL printMat(c,rows,columns)
+!CALL printMat(c,rows,columns)
 
 
 !display time spent running algorithm   

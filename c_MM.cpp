@@ -3,8 +3,8 @@
 
 using namespace std;
 
-const int columns = 10;
-const int rows = 10;
+const int columns = 1000;
+const int rows = 1000;
 void printMat(int mat[][columns], int rows, int columns);
 
 int main()
@@ -21,13 +21,13 @@ int main()
 	//init a
 	for(int i=0; i<rows; ++i)
 	  for(int j=0; j<columns; ++j)
-	    a[i][j] = i + j;	
+	    a[i][j] = i + j + 2;	
 	cout << "A matrix initialized...\n";
-	  
+	 
 	//init b
-	for(int i=0; i<rows; ++i)
-	  for(int j=0; j<columns; ++j)
-	    b[i][j] = i + j;  	    
+	for(int i=1; i<=rows; ++i)
+	  for(int j=1; j<=columns; ++j)
+	    b[i-1][j-1] = i * j ;  	    
 	cout << "B matrix initialized...\n";
 	
 	// multiply A and B
@@ -43,7 +43,7 @@ int main()
 	}
 	
 	//print results
-	printMat(c,rows,columns);
+	//printMat(c,rows,columns);
 	
 	cout << "Time spent running algorithm:" 
 	     <<((clock()-start)/double CLOCKS_PER_SEC)<< " seconds\n\n";
