@@ -1,4 +1,4 @@
-
+!Implemented by Anant Dixit (October, 2014)
 program animated_pendulum
 implicit none
 double precision, parameter :: pi = 4.0D0*atan(1.0D0), l = 1.0D-1, dt = 1.0D-2, g = 20.8D0
