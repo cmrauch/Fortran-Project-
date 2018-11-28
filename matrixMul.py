@@ -27,4 +27,4 @@ for i in range(rows):
 print("Matrix A:\n",A)
 print("Matrix B:\n",B)
 print("Matrix C:\n",C)
-print("--- %s seconds ---" % ((time.time() - start_time)))
+print("Python:     " + " %s seconds" % ((time.time() - start_time)))
